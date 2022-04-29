@@ -1,4 +1,3 @@
-
 call plug#begin()
   Plug 'preservim/NERDTree' "file system explorer https://github.com/preservim/nerdtree
   Plug 'preservim/nerdcommenter' "comment plugin https://github.com/preservim/nerdcommenter
@@ -198,7 +197,9 @@ nmap <leader>rn <Plug>(coc-rename)
 xmap <leader>sf  <Plug>(coc-format-selected)
 nmap <leader>sf  <Plug>(coc-format-selected)
 " Formatting current file
-nnoremap  <leader>f :Format <CR>
+nnoremap  <leader>fc :Format <CR>
+" organize imports
+nnoremap  <leader>OI :OR<CR>
 
 augroup mygroup
   autocmd!

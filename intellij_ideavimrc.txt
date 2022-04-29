@@ -1,5 +1,4 @@
-
-jet incsearch
+set incsearch
 set ignorecase
 set smartcase
 set multiple-cursors
@@ -61,13 +60,16 @@ vmap <leader>u <C-u>
 
 map mc <A-n>
 nnoremap mp :action PasteMultiple <CR>
-nnoremap R :action RenameElement <CR>
+" nnoremap R :action RenameElement <CR>
+nnoremap <leader>rn :action RenameElement <CR>
 
 " formatting
-nnoremap == :action ReformatCode <CR>
-vnoremap == :action ReformatCode <CR>
-nnoremap -- :action OptimizeImports <CR>
-vnoremap -- :action OptimizeImports <CR>
+" nnoremap == :action ReformatCode <CR>
+" vnoremap == :action ReformatCode <CR>
+nnoremap <leader>fc :action ReformatCode <CR>
+nnoremap <leader>OI :action OptimizeImports <CR>
+" nnoremap -- :action OptimizeImports <CR>
+" vnoremap -- :action OptimizeImports <CR>
 
 nnoremap cc :action CommentByLineComment <CR>
 vnoremap cc :action CommentByLineComment <CR>
