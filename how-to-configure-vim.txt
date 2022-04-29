@@ -1,4 +1,4 @@
-Important links
+-Important links
 https://www.youtube.com/watch?v=ssmFzoZS2G8 : java complete video link 
 
 https://www.youtube.com/watch?v=yUU12SqX_sY : vim basic configuration video tutorial
