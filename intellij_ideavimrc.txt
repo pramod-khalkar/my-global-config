@@ -92,7 +92,7 @@ nnoremap ,e :action SearchEverywhere <CR>
 " tabs
 nmap <leader>h :action PreviousTab<CR>
 nmap <leader>l :action NextTab<CR>
-nmap <leader>bd :action CloseEditor<CR>
+nmap <leader>ct :action CloseEditor<CR>
 " nnoremap <leader>c :action CloseContent <CR>
 
 " extract
@@ -119,16 +119,22 @@ vnoremap <leader>gf :action GotoFile <CR>
 nnoremap <leader>ww :action HideAllWindows <CR>
 nnoremap gp :NERDTree <CR>
 nnoremap <leader>gt :action GotoTest <CR>
-nnoremap <leader>rc :action RunClass <CR>
+" nnoremap <leader>rc :action RunClass <CR>
 nnoremap ,rc :action ChooseRunConfiguration <CR>
+nnoremap .rn :action RunClass<CR>
+nnoremap .dg :action DebugClass<CR>
+nnoremap .st :action Stop<CR>
 nnoremap <leader>gq :action QuickList.Git <CR>
 nnoremap <leader>ns :action NewScratchFile <CR>
-nnoremap <leader>nf :action NewElementSamePlace <CR>
+" jnnoremap <leader>nf :action NewElementSamePlace <CR>
+" nnoremap <leader>nf :action NewFile<CR>
+" nnoremap <leader>tt :action Terminal.OpenInTerminal <CR>
+nnoremap <leader>tt :action ActivateTerminalToolWindow <CR>
 nnoremap <leader>ge :action Generate<CR>
 vnoremap <leader>re :action Replace<CR>
 nnoremap <leader>re :action Replace<CR>
-vnoremap / :action Find<CR>
-nnoremap / :action Find<CR>
+vnoremap <leader>fnd :action Find<CR>
+nnoremap <leader>fnd :action Find<CR>
 nnoremap <leader>ss :action SelectInProjectView<CR>
 
 " useful
