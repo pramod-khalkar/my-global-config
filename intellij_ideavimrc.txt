@@ -35,16 +35,15 @@ noremap <Esc> <nop>
 nmap <S-Enter> O<Esc>
 " nmap <CR> o<Esc>
 
-" nnoremap <C-j> :m +1<CR>
-" nnoremap <C-k> :m -2<CR>
-" inoremap <C-j> <Esc>:m +1<CR>gi
-" inoremap <C-k> <Esc>:m -2<CR>gi
+inoremap <C-k> <Esc>:m -2<CR>gi
+nnoremap <C-k> :m -2<CR>
+inoremap <C-j> <Esc>:m +1<CR>gi
+nnoremap <C-j> :m +1<CR>
 
 " system clipboard
 vmap <leader>yiw "+yiw
 nmap <leader>yiw "+yiw
 vmap <leader>y "+y
-vmap <leader>d "_d
 nmap <leader>y "+yy
 nmap <leader>p "+p
 nmap <leader>P "+P
@@ -92,7 +91,7 @@ nnoremap ,e :action SearchEverywhere <CR>
 " tabs
 nmap <leader>h :action PreviousTab<CR>
 nmap <leader>l :action NextTab<CR>
-nmap <leader>ct :action CloseEditor<CR>
+nmap <leader>tc :action CloseEditor<CR>
 " nnoremap <leader>c :action CloseContent <CR>
 
 " extract
@@ -102,7 +101,9 @@ vnoremap <leader>em :action ExtractMethod  <Cr>
 nnoremap <leader>ic :action IntroduceConstant <CR>
 
 " file navigation
-nnoremap gh :action Back <CR>
+" nnoremap gh :action Back <CR>
+nnoremap gh :action ParameterInfo <CR>
+nnoremap <C-o> :action Back <CR>
 nnoremap gl :action Forward <CR>
 nnoremap gj :action MethodDown <CR>
 nnoremap gk :action MethodUp <CR>
@@ -120,8 +121,9 @@ nnoremap <leader>ww :action HideAllWindows <CR>
 nnoremap gp :NERDTree <CR>
 nnoremap <leader>gt :action GotoTest <CR>
 " nnoremap <leader>rc :action RunClass <CR>
-nnoremap ,rc :action ChooseRunConfiguration <CR>
-nnoremap .rn :action RunClass<CR>
+nnoremap <leader>rc :action ChooseRunConfiguration <CR>
+" nnoremap .rn :action RunClass<CR>
+nnoremap .ru :action RunClass<CR>
 nnoremap .dg :action DebugClass<CR>
 nnoremap .st :action Stop<CR>
 nnoremap <leader>gq :action QuickList.Git <CR>
@@ -129,7 +131,7 @@ nnoremap <leader>ns :action NewScratchFile <CR>
 " jnnoremap <leader>nf :action NewElementSamePlace <CR>
 " nnoremap <leader>nf :action NewFile<CR>
 " nnoremap <leader>tt :action Terminal.OpenInTerminal <CR>
-nnoremap <leader>tt :action ActivateTerminalToolWindow <CR>
+nnoremap <leader>tw :action ActivateTerminalToolWindow <CR>
 nnoremap <leader>ge :action Generate<CR>
 vnoremap <leader>re :action Replace<CR>
 nnoremap <leader>re :action Replace<CR>
