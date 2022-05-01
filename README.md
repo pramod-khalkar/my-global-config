@@ -1,2 +1,2 @@
 # vim-config
-VIM configuration
+VIM configuration files for intellij plugin and vim editor
