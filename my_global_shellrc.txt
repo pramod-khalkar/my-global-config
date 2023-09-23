@@ -1,0 +1,9 @@
+export PATH="$PATH:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/custom-commands"
+
+#alias defined here 
+alias work="cd ~/Documents/workspace"
+alias job="cd ~/Documents/job-hunt-docs"
+alias docs="cd ~/Documents"
+alias vimconfig="vi ~/.vimrc"
+alias shellconfig="vi ~/.zshrc"
+alias c="clear"
