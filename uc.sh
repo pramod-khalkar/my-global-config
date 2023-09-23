@@ -8,7 +8,7 @@ git checkout -b develop
 git add .
 git status
 
-echo "Do you wish to push?"
+echo "Do you wish to push changes?"
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) 
