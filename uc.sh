@@ -13,7 +13,7 @@ select yn in "Yes" "No"; do
     case $yn in
         Yes ) 
 git commit -m "auto push"
-git push develop
+git push 
  break;;
         No ) exit;;
     esac
