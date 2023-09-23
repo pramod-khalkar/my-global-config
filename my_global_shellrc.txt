@@ -7,3 +7,4 @@ alias docs="cd ~/Documents"
 alias vimconfig="vi ~/.vimrc"
 alias shellconfig="vi ~/.zshrc"
 alias c="clear"
+alias push-config=~/Documents/workspace/config-docs/my-global-config/uc.sh
