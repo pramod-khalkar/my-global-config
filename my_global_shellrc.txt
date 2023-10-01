@@ -1,10 +1,11 @@
 export PATH="$PATH:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/custom-commands"
-
 #alias defined here 
 alias work="cd ~/Documents/workspace"
 alias job="cd ~/Documents/job-hunt-docs"
 alias docs="cd ~/Documents"
-alias vimconfig="vi ~/.vimrc"
+alias vimconfig="vi -p ~/.vimrc ~/.ideavimrc"
 alias shellconfig="vi ~/.zshrc"
+alias allconfig="vi -p ~/.vimrc ~/.ideavimrc ~/.zshrc"
 alias c="clear"
+# This is to push updated vimrc and zshrc (shell) to git repo
 alias push-config=~/Documents/workspace/config-docs/my-global-config/uc.sh

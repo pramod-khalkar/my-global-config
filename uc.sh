@@ -4,6 +4,7 @@ cat ~/.vimrc > my_global_vimrc.txt
 cat ~/.zshrc > my_global_shellrc.txt
 cat ~/.ideavimrc > my_global_intellij_vimrc.txt 
 
+cd /Users/pramod/Documents/workspace/config-docs/my-global-config
 git checkout develop
 git add .
 git status
