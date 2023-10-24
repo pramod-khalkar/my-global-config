@@ -1,21 +1,21 @@
-#!/bin/zsh
+#!/bin/bash
 set -ex
-cat ~/.vimrc > my_global_vimrc.txt
-cat ~/.zshrc > my_global_shellrc.txt
-cat ~/.ideavimrc > my_global_intellij_vimrc.txt 
-
 cd /Users/pramod/Documents/workspace/config-docs/my-global-config
-git checkout develop
-git add .
-git status
+cp ~/.vimrc my-global-vimrc.txt
+cp ~/.zshrc my-global-shellrc.txt
+cp ~/.ideavimrc my-global-intellij-vimrc.txt 
+cp ~/custom-commands/* my-global-script
 
-echo "Do you wish to push changes?"
-select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) 
-git commit -m "auto push"
-git push 
- break;;
-        No ) exit;;
-    esac
-done
+git checkout develop
+git status
+read -p "Do you wish to push(y/n)" ans 
+if [[ $ans == "y" ]]
+then
+	git add .
+	git status
+	git commit -m "auto push"
+	git push 
+	echo "pushed"
+else
+	echo "Exiting gracefully"
+fi

@@ -1,13 +1,13 @@
 "--------------------START vimrc key mapping--------------
-" map leader key to <space-bar>
-let mapleader = " "
 " this is to just ignore case 
 set ignorecase
+" smart search when upper case letter used in search
+set smartcase
 " highlighting syntax in different colors
 syntax enable 
 syntax on 
 " showing left side relative line number
-set relativenumber
+set number relativenumber
 " This will break line in between whitespaces will not cut the word while
 " breaking long line
 set linebreak 

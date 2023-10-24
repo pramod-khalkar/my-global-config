@@ -8,4 +8,6 @@ alias shellconfig="vi ~/.zshrc"
 alias allconfig="vi -p ~/.vimrc ~/.ideavimrc ~/.zshrc"
 alias c="clear"
 # This is to push updated vimrc and zshrc (shell) to git repo
-alias push-config=~/Documents/workspace/config-docs/my-global-config/uc.sh
+alias pgc="./Users/pramod/Documents/workspace/config-docs/my-global-config/uc.sh"
+# apply current shell config
+alias uzsh="source ~/.zshrc"
