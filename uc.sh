@@ -15,7 +15,7 @@ then
 	git status
 	git commit -m "auto push"
 	git push 
-	echo "pushed"
+	echo "update & pushed"
 else
 	echo "Exiting gracefully"
 fi
