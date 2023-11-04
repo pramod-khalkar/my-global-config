@@ -1,0 +1,87 @@
+" Using existing configurations
+source ~/.vimrc 
+"----------------------START Intellij IDE key mapping------------------------------------
+
+" open window for multiple past 
+nnoremap mp :action PasteMultiple <CR>
+" rename file or element
+nnoremap R :action RenameElement <CR>
+
+" formatting code
+nnoremap == :action ReformatCode <CR>
+vnoremap == :action ReformatCode <CR>
+
+" Optimize import or removed unused imports
+nnoremap -- :action OptimizeImports <CR>
+vnoremap -- :action OptimizeImports <CR>
+
+" commenting the code with single line
+nnoremap cc :action CommentByLineComment <CR>
+vnoremap cc :action CommentByLineComment <CR>
+
+" open action window
+nnoremap ,a :action GotoAction <CR>
+vnoremap ,a :action GotoAction <CR>
+
+" split window
+nnoremap <leader>sv :action SplitVertically <CR>
+nnoremap <leader>sc :action UnsplitAll <CR>
+nnoremap <leader>v :action NextSplitter <CR>
+
+" search in path
+nmap <leader>fp :action FindInPath<CR>
+vmap <leader>fp :action FindInPath<CR>
+
+" find usage
+nnoremap U :action FindUsages <CR>
+vnoremap U :action FindUsages <CR>
+nnoremap ,e :action SearchEverywhere <CR>
+
+" manage tabs 
+nmap <leader>h :action PreviousTab<CR>
+nmap <leader>l :action NextTab<CR>
+nnoremap <leader>cc :action CloseContent <CR>
+
+" extract shortcuts
+nnoremap <leader>iv :action IntroduceVariable <CR>
+nnoremap <leader>em :action ExtractMethod  <Cr>
+vnoremap <leader>em :action ExtractMethod  <Cr>
+nnoremap <leader>ic :action IntroduceConstant <CR>
+
+" file navigation
+nnoremap gh :action Back <CR>
+nnoremap gl :action Forward <CR>
+nnoremap <C-o> :action Back <CR>
+nnoremap pi :action ParameterInfo <CR>
+nnoremap gj :action MethodDown <CR>
+nnoremap gk :action MethodUp <CR>
+nnoremap gs :action GotoSuperMethod <CR>
+nnoremap gi :action GotoImplementation <CR>
+nnoremap g, :action JumpToLastChange <CR>
+nnoremap g. :action JumpToNextChange <CR>
+nnoremap gd :action GotoDeclaration <CR>
+nnoremap gr :action RecentFiles <CR>
+nnoremap <leader>gc :action GotoClass <CR>
+vnoremap <leader>gc :action GotoClass <CR>
+nnoremap <leader>gf :action GotoFile <CR>
+vnoremap <leader>gf :action GotoFile <CR>
+nnoremap <leader>ww :action HideAllWindows <CR>
+nnoremap <leader>gt :action GotoTest <CR>
+nnoremap <leader>rc :action RunClass <CR>
+nnoremap <leader>dc :action DebugClass <CR>
+nnoremap <leader>sp :action Stop <CR>
+nnoremap <leader>cr :action ChooseRunConfiguration <CR>
+nnoremap <leader>gq :action QuickList.Git <CR>
+nnoremap <leader>ns :action NewScratchFile <CR>
+nnoremap <leader>ne :action NewElementSamePlace <CR>
+nnoremap <leader>nf :action NewFile<CR>
+nnoremap <leader>tt :action Terminal.OpenInTerminal <CR>
+nnoremap <leader>tw :action ActivateTerminalToolWindow <CR>
+nnoremap <leader>ge :action Generate<CR>
+vnoremap <leader>re :action Replace<CR> " open replace text window
+nnoremap <leader>re :action Replace<CR>
+vnoremap <leader>fd :action Find<CR>
+nnoremap <leader>fd :action Find<CR>
+nnoremap <leader>ss :action SelectInProjectView<CR>
+
+"----------------------END Intellij IDE key mapping------------------------------------
