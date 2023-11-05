@@ -8,7 +8,7 @@ alias shellconfig="vi ~/.zshrc"
 alias allconfig="vi -p ~/.vimrc ~/.ideavimrc ~/.zshrc"
 alias c="clear"
 # This is to push updated vimrc and zshrc (shell) to git repo
-alias pgc="./Users/pramod/Documents/workspace/config-docs/my-global-config/config-git-push"
+alias gcp="/Users/pramod/Documents/workspace/config-docs/my-global-config/git-config-push"
 # apply current shell config
 alias uzsh="source ~/.zshrc"
 # My scan docs sync to cloud both directions
