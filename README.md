@@ -1,3 +1,70 @@
 # My global configuration
 1. VIM configuration files for intellij plugin and vim editor
 2. Shell configuration
+
+-Important links
+https://www.youtube.com/watch?v=ssmFzoZS2G8 : java complete video link 
+
+https://www.youtube.com/watch?v=yUU12SqX_sY : vim basic configuration video tutorial
+
+https://github.com/junegunn/vim-plug : VIM plug manager vim-plug
+
+https://github.com/ycm-core/YouCompleteMe : YouCompleteMe code completion engine for vim ( Need compilation of code ) 
+
+https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack : Font library
+
+https://github.com/ryanoasis/vim-devicons/wiki/Installation : icon configuration 
+
+https://medium.com/@rohmanhakim/how-to-set-up-code-completion-for-vim-in-macos-9766dd459385 : code completion config article
+
+https://github.com/neoclide/coc-java : Java code completion engine library 
+
+https://github.com/dansomething/coc-java-debug/blob/master/README.md : java code debug configuration 
+
+https://dev.to/mr_destructive/vim-keymapping-guide-3olb : key mappting configuration 
+
+https://github.com/artur-shaik/vim-javacomplete2 : java code completion 
+
+
+
+
+How to configure it , step by step guide
+
+1.Installation of vim plug manager
+
+    - https://github.com/junegunn/vim-plug
+    - curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
+
+2.Create ".vimrc" config file at location "/Users/pramod/.vimrc" or "~/.vimrc" if not exit 
+    
+    - Refer sample file configuration "sample_vimrc.txt"
+    
+3.After opening vim editor 
+            
+            - :PlugInstall or :PlugUpdate for downloading or udpating all configured plugin in .vimrc file
+
+4.Java code completion
+    - COC used for java code completion 
+    - following are the steps
+        - Make sure you have nodeJS ≥ 8.0, or else download it via the command below
+          curl -sL install-node.now.sh | sh
+        
+        - Install yarn
+          curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+
+        - Clone COC repo
+          cd ~/.vim/pack/coc/start
+          git clone https://github.com/neoclide/coc.nvim.git --depth=1
+        
+        - cd ~/.vim/pack/coc/start/coc.nvim
+          yarn install or npm install 
+
+        - Add Plug for COC. Open ~/.vimrc in editor and add the lines below
+          call plug#begin()
+          Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+          call plug#end()
+
+        - Open VIM and use command :PlugInstall : will install COC 
+
+        - Install COC extension for java langugage Java langugage server , similar we can install other language extension to support
+          :CocInstall coc-java  

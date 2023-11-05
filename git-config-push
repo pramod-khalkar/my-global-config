@@ -1,10 +1,12 @@
 #!/bin/bash
+# Script to push all local vimrc,ideavimrc,bashrc,custom commands to git repo
 set -ex
 cd /Users/pramod/Documents/workspace/config-docs/my-global-config
-cp ~/.vimrc my-global-vimrc.txt
-cp ~/.zshrc my-global-shellrc.txt
-cp ~/.ideavimrc my-global-intellij-vimrc.txt 
-cp ~/custom-commands/* my-global-script
+cp ~/.vimrc vimrc 
+cp ~/.zshrc bashrc 
+cp ~/.ideavimrc ideavimrc 
+cp ~/custom-commands/* custom-commands 
+cp ~/.vim/ftplugin/* vim
 
 git checkout develop
 git status
