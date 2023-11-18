@@ -1,0 +1,4 @@
+#!/bin/bash
+# apply configurations to your system
+
+echo "Todo task"

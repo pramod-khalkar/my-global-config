@@ -1,3 +1,27 @@
+Short Guide:
+
+1. Create .vimrc or .ideavimrc if not available in $HOME (~/) directory and copy vimrc or ideavimrc in respective files
+2. Copy bashrc content in your respective shell file (if not present then create it)
+3. FOr plug-ins we are suing vim-plug so please use below commands to install all plug-ins available in vimrc file
+    PlugInstall
+    PlugUpdate etc.
+4. For a file type specific configurations
+    a. Create directory "~/.vim/ftplugin" 
+    b. Create files like below
+        java = java.vim
+        python = python.vim
+        markdown = markdown.vim
+5. For color schemes
+    a. Create directory "~/.vim/colors"
+    b. download color scheme here like (curl -o molokai.vim "https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim)
+    c. Set like "colorscheme molokai"
+5. DIrectory structure for config
+    ~/.vim = vim related files plug-ins, colors schemes and other config data
+    ~/.viminfo = this is use to store data for sessions like command history, marks etc.
+    ~/.vimrc = This is use to store primary configurations
+
+
+
 # My global configuration
 1. VIM configuration files for intellij plugin and vim editor
 2. Shell configuration

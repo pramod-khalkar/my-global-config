@@ -18,6 +18,7 @@ Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 autocmd! User goyo.vim echom 'Goyo is now loaded!'
 call plug#end()
 
+
 " disable compatibility with vi which can cause unexpected issues
 set nocompatible
 " this is to just ignore case 
