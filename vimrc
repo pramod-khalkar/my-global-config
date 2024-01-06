@@ -8,16 +8,36 @@
 "            ╚═══╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝         "
 "                                                          " 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vim-Plug installation and setup
+" check vim-plug available or not if not then install it 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
+
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs),'!isdirectory(v:val.dir)')) | PlugInstall --sync | source ~/.vimrc | endif
+
+" load the below listed plug-ins
 call plug#begin('~/.vim/pack/myplugins/start')
-" List your plugins here " e.g., Plug 'username/myplugin'
+" minimize the screen for md file editing e.g. :Goyo
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
-autocmd! User goyo.vim echom 'Goyo is now loaded!'
+" fuzzy finder for file search and other operations related to files , e.g. :Ag
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" commenting lines in supported programming languages e.g. gcc or gc
+Plug 'tpope/vim-commentary'
+" file explorer 
+Plug 'preservim/nerdtree'
+" icons for other plugins. Note: always load this at last of all other plugins
+" Plug 'ryanoasis/vim-devicons'
+" useful for bullet points
+Plug 'dkarter/bullets.vim'
 call plug#end()
 
+" FZF key bindings
+nnoremap <C-f> :FZF<CR>
+ let g:fzf_action = {
+   \ 'ctrl-t': 'tab split',
+     \ 'ctrl-i': 'split',
+       \ 'ctrl-v': 'vsplit' }
 
 " disable compatibility with vi which can cause unexpected issues
 set nocompatible

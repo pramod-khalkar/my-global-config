@@ -19,6 +19,12 @@ Short Guide:
     ~/.vim = vim related files plug-ins, colors schemes and other config data
     ~/.viminfo = this is use to store data for sessions like command history, marks etc.
     ~/.vimrc = This is use to store primary configurations
+6. How to install devicons fonts
+    a. create directory ~/.fonts
+    b. download font from (https://www.nerdfonts.com/font-downloads) currently it is (https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/DejaVuSansMono.zip)
+    c. unzip with command "unzip DejaVuSansMono.zip" and move unzip files to ~/.fonts directory
+    d. Need to build cache with "fc-cache fv" command but not sure working of this command
+
 
 
 
@@ -83,7 +89,7 @@ How to configure it , step by step guide
         - cd ~/.vim/pack/coc/start/coc.nvim
           yarn install or npm install 
 
-        - Add Plug for COC. Open ~/.vimrc in editor and add the lines below
+        - Add Plugin for COC. Open ~/.vimrc in editor and add the lines below
           call plug#begin()
           Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
           call plug#end()
@@ -92,3 +98,13 @@ How to configure it , step by step guide
 
         - Install COC extension for java langugage Java langugage server , similar we can install other language extension to support
           :CocInstall coc-java  
+
+
+INSTALLING FUZZY FINDER
+
+1. Install binaries using below details
+   https://github.com/junegunn/fzf
+   > brew install fzf 
+2. Then add plugin in vimrc file
+
+

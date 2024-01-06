@@ -3,14 +3,16 @@ export PATH="$PATH:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$
 alias work="cd ~/Documents/workspace"
 alias job="cd ~/Documents/job-hunt-docs"
 alias docs="cd ~/Documents"
-alias vimconfig="vi -p ~/.vimrc ~/.ideavimrc"
+alias vimconfig="vi -p ~/.vimrc ~/.ideavimrc ~/.vim/ftplugin/*"
 alias shellconfig="vi ~/.zshrc"
 alias allconfig="vi -p ~/.vimrc ~/.ideavimrc ~/.zshrc"
 alias c="clear"
+alias ls="ls --color=auto"
+alias gs="git status"
 # This is to push updated vimrc and zshrc (shell) to git repo
-alias gcp="/Users/pramod/Documents/workspace/config-docs/my-global-config/git-config-push"
+alias pmc="/Users/pramod/Documents/workspace/config-docs/my-global-config/git-config-push"
 # apply current shell config
-alias uzsh="source ~/.zshrc"
+alias reload="source ~/.zshrc"
 # My scan docs sync to cloud both directions
 alias mds="rsync -rtuv --progress /Users/pramod/Documents/family-docs/my/scan-docs/* /Users/pramod/Library/Mobile\ Documents/com~apple~CloudDocs/sync-docs/scan-docs && rsync -rtuv --progress /Users/pramod/Library/Mobile\ Documents/com~apple~CloudDocs/sync-docs/scan-docs/* /Users/pramod/Documents/family-docs/my/scan-docs"
 # list docker images
@@ -35,3 +37,5 @@ fi
 dmd(){
   docker image rm -f $1
 }
+# fuzzy finder settings
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
