@@ -140,4 +140,7 @@ nnoremap <leader>j :m +1<CR>
 nnoremap n nzz
 nnoremap N Nzz
 
+" file path autocompletion after slash type
+inoremap / /<C-x><C-f>
+
 "--------------------END VIMRC--------------
