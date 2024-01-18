@@ -13,8 +13,6 @@
           2. PlugUpdate - To update existing plugin to latest
           
        4. Java code completion
-            - COC used for java code completion 
-		    - following are the steps
 		    - Make sure you have nodeJS ≥ 8.0, or else download it via the command below
 		      curl -sL install-node.now.sh | sh
 		    - Install yarn
