@@ -2,28 +2,30 @@
 # Script to push all local vimrc,ideavimrc,bashrc,custom commands to git repo
 set -ex
 
-cd ~/Documents/workspace/config-docs/my-global-config
-
 #copying shell/terminal config 
-cp ~/.zshrc ./terminal/.zshrc
+cp ~/.zshrc ./terminal
 
 # copying vim config
-cp ~/.vimrc ./vim/.vimrc
-cp ~/.ideavimrc ./vim/.ideavimrc
-cp ~/.vim/ftplugin/* ./vim/vim/
+cp ~/.vimrc ./vim
+cp ~/.ideavimrc ./vim
+cp ~/.vim/ftplugin/* ./vim/vim/ftplugin/
 
 # copying nvim config
-cp ~/.config/nvim/* ./nvim/.config/nvim/
+# mkdir -p ./nvim/.config/nvim && cp -rf ~/.config/nvim/** ./nvim/.config/nvim/
+cp -rf ~/.config/nvim/** ./nvim/.config/nvim/
 
 # copying tmux config
-cp ~/.tmux.conf ./tmux/.tmux.conf
+cp ~/.tmux.conf ./tmux
 
 # copying custom commands
 cp ~/custom-commands/* ./custom-commands/ 
 
-git checkout develop
+#git checkout develop
+
 git status
+
 read -p "Do you wish to push(y/n)" ans 
+
 if [[ $ans == "y" ]]
 then
 	git add .
