@@ -1,3 +1,2 @@
 ### ignore ext ###
 .idea
-nvim/.config/nvim/plugin/packer_compiled.lua
