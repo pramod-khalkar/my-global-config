@@ -87,6 +87,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+# bindkey '^p' autosuggest-accept
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH="$PATH:$HOME/custom-commands"
@@ -115,12 +116,15 @@ export PATH="$PATH:$HOME/custom-commands"
 docs="~/Documents"
 alias vi="nvim"
 alias c="clear"
+alias me="cd $docs/family-docs/my"
 alias work="cd $docs/workspace"
 alias job="cd $docs/job-hunt-docs"
 alias vimconfig="nvim ~/.config/nvim"
 alias shellconfig="nvim ~/.zshrc"
 alias gs="git status"
 alias reload="source ~/.zshrc"
+alias dd="cd ~/Downloads"
+alias docs="cd ~/Documents"
 # My scan docs sync to cloud both directions
 alias mds="rsync -rtuv --progress /Users/pramod/Documents/family-docs/my/scan-docs/* /Users/pramod/Library/Mobile\ Documents/com~apple~CloudDocs/sync-docs/scan-docs && rsync -rtuv --progress /Users/pramod/Library/Mobile\ Documents/com~apple~CloudDocs/sync-docs/scan-docs/* /Users/pramod/Documents/family-docs/my/scan-docs"
 # list docker images

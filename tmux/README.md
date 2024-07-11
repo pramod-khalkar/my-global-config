@@ -120,3 +120,9 @@ tmux ls :- list all sessions
 <ctl-b> : + source-file ~/.tmux.conf :- reload tmux.conf file
 
 ```
+
+# Key binding and commands
+
+<clt-a> : prefix custom key
+
+tmux new -s <session_name>

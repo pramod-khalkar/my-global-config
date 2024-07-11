@@ -113,3 +113,7 @@
 ### tmux guide `./tmux/tmux-setup.md`
 
 [Reference guide](https://github.com/josean-dev/dev-environment-files)
+
+### Other helpful links
+
+[LSP servers](https://github.com/williamboman/mason-lspconfig.nvim)

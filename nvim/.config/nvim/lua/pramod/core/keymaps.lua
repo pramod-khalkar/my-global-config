@@ -35,6 +35,12 @@ keymap.set("v", "H", "^")
 keymap.set("n", "L", "$") -- go to end of line
 keymap.set("v", "L", "$")
 
+-- switching lines
+keymap.set("n", "<leader>k", ":m -2<CR>")
+keymap.set("i", "<leader>k", "<Esc>:m -2<CR>gi")
+keymap.set("i", "<leader>j", "<Esc>:m +1<CR>gi")
+keymap.set("n", "<leader>j", ":m +1<CR>")
+
 ----------------------
 -- Plugin Keybinds
 ----------------------
