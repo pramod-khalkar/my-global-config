@@ -38,12 +38,14 @@ return {
 				"prismals",
 				"pyright",
 				"jdtls", --  java
+				"bashls",
 			},
 			-- auto-install configured servers (with lspconfig)
 			automatic_installation = true, -- not the same as ensure_installed
 		})
 
 		mason_tool_installer.setup({
+			-- list of formatter for mason to install
 			ensure_installed = {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
@@ -52,6 +54,7 @@ return {
 				"pylint", -- python linter
 				"eslint_d", -- js linter
 				"google-java-format", -- java formatter
+				"shfmt", -- bash/sh formatter
 			},
 		})
 	end,

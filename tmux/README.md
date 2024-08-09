@@ -110,19 +110,27 @@ run '~/.tmux/plugins/tpm/tpm'
 
 ```shell
 
-<ctl-b> :- is prefix by default
-<ctl-b> I :- Install added plugins
-<ctl-b> w :- Show all windows
-tmux ls :- list all sessions
-<ctl-b> - :- horizontal split
-<ctl-b> | :- vertical split
-<ctl-b> r :- reload tmux.conf file (Note :shortcut defined in tmux.conf file)
-<ctl-b> : + source-file ~/.tmux.conf :- reload tmux.conf file
+`<ctl-a>` is prefix by default
+`<ctl-a> I` Install added plugins
+`<ctl-a> w`  Show all windows
+`<ctl-a> s` show all sessions
+`<ctl-a> -` horizontal split
+`<ctl-a> |` vertical split
+`<ctl-a> r` reload tmux.conf file (Note :shortcut defined in tmux.conf file)
+`<ctl-a> : source-file ~/.tmux.conf` reload tmux.conf file
+`tmux ls` list all sessions
+'tmux new -s <session_name>' create new sesssion
+'tmux kill-session -t <session_name or number>' kill existing session
+`tmux a` attach to existing session
+`tmux d` dettach from existing session
+`<ctl-a> m` minimize and maximize
+`<ctl> j/k/l/h` navigate through panes
+`<ctl-a> j/k/l/h` increase/decrease size of panes
 
 ```
 
 # Key binding and commands
 
-<clt-a> : prefix custom key
+`<clt-a>` prefix custom key
 
 tmux new -s <session_name>

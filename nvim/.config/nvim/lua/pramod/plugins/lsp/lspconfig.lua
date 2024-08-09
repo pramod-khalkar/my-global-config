@@ -6,6 +6,7 @@ return {
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 	},
 	config = function()
+		vim.lsp.set_log_level("debug")
 		-- import lspconfig plugin
 		local lspconfig = require("lspconfig")
 
@@ -24,12 +25,16 @@ return {
 
 			opts.desc = "Go to declaration"
 			keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
+			-- keymap.set("n", "gD", function()
+			-- 	print("key pressed")
+			-- 	vim.lsp.buf.declaration()
+			-- end, opts)
 
 			opts.desc = "Show LSP definitions"
 			keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
 
 			opts.desc = "Show LSP implementations"
-			keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
+			keymap.set("n", "gI", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
 
 			opts.desc = "Show LSP type definitions"
 			keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
@@ -138,10 +143,21 @@ return {
 		})
 
 		-- configure java server
-		lspconfig["pyright"].setup({
+		lspconfig["jdtls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 			filetypes = { "java" },
+			root_dir = lspconfig.util.root_pattern(".git", "pom.xml", "build.gradle"),
+			settings = {
+				java = {},
+			},
+		})
+
+		-- configure bash server
+		lspconfig["bashls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			filetypes = { "sh" },
 		})
 
 		-- configure lua server (with special settings)

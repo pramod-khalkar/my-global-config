@@ -78,7 +78,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git 
+  # git
 	zsh-autosuggestions 
 	zsh-syntax-highlighting 
 	web-search
@@ -90,7 +90,8 @@ source $ZSH/oh-my-zsh.sh
 # bindkey '^p' autosuggest-accept
 
 # export MANPATH="/usr/local/man:$MANPATH"
-export PATH="$PATH:$HOME/custom-commands"
+# export JAVA_HOME="/Users/pramod/Library/Java/JavaVirtualMachines/azul-21.0.4/Contents/Home/bin"
+# export PATH="$PATH:$HOME/custom-commands"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -120,24 +121,46 @@ alias me="cd $docs/family-docs/my"
 alias work="cd $docs/workspace"
 alias job="cd $docs/job-hunt-docs"
 alias vimconfig="nvim ~/.config/nvim"
-alias shellconfig="nvim ~/.zshrc"
+alias shellconfig="nvim -p ~/.zshrc ~/.zprofile"
 alias gs="git status"
 alias reload="source ~/.zshrc"
 alias dd="cd ~/Downloads"
 alias docs="cd ~/Documents"
 # My scan docs sync to cloud both directions
 alias mds="rsync -rtuv --progress /Users/pramod/Documents/family-docs/my/scan-docs/* /Users/pramod/Library/Mobile\ Documents/com~apple~CloudDocs/sync-docs/scan-docs && rsync -rtuv --progress /Users/pramod/Library/Mobile\ Documents/com~apple~CloudDocs/sync-docs/scan-docs/* /Users/pramod/Documents/family-docs/my/scan-docs"
-# list docker images
+
+#docker aliases 
 alias dml="docker image ls"
+alias dmins="docker image inspect"
+alias dcl="docker container ls"
+alias dci="docker container inspect"
+alias dnl="docker network ls"
+alias dni="docker network inspect"
+
+#podman aliases
+alias pml="podman image ls"
+alias pmi="podman image inspect"
+alias pcl="podman container ls"
+alias pci="podman container inspect"
+alias pscl="podman system connection list"
+alias pmni="podman machine init"
+alias pmns="podman machine start"
+alias pmnst="podman machine stop"
+alias pnl="podman network ls"
+alias pni="podman network inspect"
+
+# kubectl aliases
+alias k8="kubectl"
+
 # function to get inside docker image
 # $1= docker image name
-dmi(){
+function dmi(){
   docker run -it --entrypoint bash $1
 }
 # function to build docker image first param is tag name and second docker file name optional
 # $1= tag name
 # $2= docker file name OPTIONAL
-dmb(){
+function dmb(){
 if [[ -z $2 ]]; then
   docker build -t $1 Dockerfile .
 else
@@ -146,7 +169,7 @@ fi
 }
 # funtion to delete docker image
 # $1= docker image name
-dmd(){
+function dmd(){
   docker image rm -f $1
 }
 # fuzzy finder settings (Note : need to install fuzzy finder first, refer readme file for installation guide) 

@@ -19,6 +19,8 @@ return {
 				"black", -- python formatter
 				"pylint", -- python linter
 				"eslint_d", -- js linter
+				"google-java-format", -- java formatter
+				"shfmt", -- bash/sh formatter
 			},
 		})
 
@@ -32,7 +34,7 @@ return {
 		-- configure null_ls
 		null_ls.setup({
 			-- add package.json as identifier for root (for typescript monorepos)
-			root_dir = null_ls_utils.root_pattern(".null-ls-root", "Makefile", ".git", "package.json"),
+			root_dir = null_ls_utils.root_pattern(".null-ls-root", "Makefile", ".git", "package.json", "build.gradle"),
 			-- setup formatters & linters
 			sources = {
 				--  to disable file types use

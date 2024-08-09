@@ -20,6 +20,10 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 keymap.set("n", "<leader>+", "<C-a>") -- increment
 keymap.set("n", "<leader>-", "<C-x>") -- decrement
 
+-- come to center after serch word
+keymap.set("n", "n", "nzz")
+keymap.set("v", "N", "Nzz")
+
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
@@ -30,16 +34,18 @@ keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
-keymap.set("n", "H", "^") -- go to beginning of line
-keymap.set("v", "H", "^")
-keymap.set("n", "L", "$") -- go to end of line
-keymap.set("v", "L", "$")
 
 -- switching lines
 keymap.set("n", "<leader>k", ":m -2<CR>")
 keymap.set("i", "<leader>k", "<Esc>:m -2<CR>gi")
 keymap.set("i", "<leader>j", "<Esc>:m +1<CR>gi")
 keymap.set("n", "<leader>j", ":m +1<CR>")
+
+-- add tickmark or cross
+keymap.set("n", "<leader>ok", "0i<C-k>OK<Esc>")
+keymap.set("n", "<leader>xx", "0i<C-k>XX<Esc>")
+keymap.set("i", "<leader>ok", "<C-k>OK<Esc>")
+keymap.set("i", "<leader>xx", "<C-k>XX<Esc>")
 
 ----------------------
 -- Plugin Keybinds
