@@ -33,7 +33,7 @@ if [[ $ans == "y" || $ans == "Y" ]]; then
 
   read -p "What would be the commit message?: " cmsg
   if [[ -n $cmsg ]]; then
-    git commit -m "auto push"
+    git commit -m "$cmsg"
     git push
     echo "update & pushed"
   else
