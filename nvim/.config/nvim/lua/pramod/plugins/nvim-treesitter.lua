@@ -47,6 +47,7 @@ return {
 					"luadoc",
 					"vim",
 					"lua",
+					"regex",
 				},
 				incremental_selection = {
 					enable = true,
